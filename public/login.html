@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+</head>
+    
+<body>
+ 
+    <!-- BEGIN # BOOTSNIP INFO -->
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">Chat IRC grupo 5</h1>
+        <p class="text-center"><a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Fazer Login no Chat</a></p>
+	</div>
+</div>
+<!-- END # BOOTSNIP INFO -->
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="img-circle" id="img_logo" src="http://bootsnipp.com/img/logo.jpg">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                
+                    <!-- Begin # Login Form -->
+                    <form id="login-form" action="/login" method="post">
+		                <div class="modal-body">
+				    		<div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Entre com as informações para resenhar</span>
+                            </div>
+				    		<input id="nome" name="nome" class="form-control" type="text" placeholder="Nome" required>
+				    		<input id="canal" name="canal" class="form-control" type="text" placeholder="Canal" required>
+                            <input id="servidor" name="servidor" class="form-control" type="text" placeholder="Servidor" required>
+                            <input id="foto" name="foto" class="form-control" type="text" placeholder="URL Foto" required>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+				        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                </div>
+                <!-- End # DIV Form -->
+                
+			</div>
+		</div>
+	</div>
+    <!-- END # MODAL LOGIN -->
+    
+</body>
+</html>
